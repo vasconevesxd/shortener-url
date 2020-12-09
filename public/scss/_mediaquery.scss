@@ -1,0 +1,24 @@
+@media (max-width: 600px) { 
+    .short-form{
+        input{
+            flex-basis: revert;
+            margin-bottom: 20px;
+        }
+
+        button{
+            display: block;
+            width: 100%;
+        }
+    }
+   
+}
+
+@media (max-width: 1024px) {
+    .jumbotron {
+        text-align: center;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
