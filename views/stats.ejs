@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
+  <title>Short Links - Stats</title>
+</head>
+
+<body>
+
+  <div class="jumbotron bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="display-4 font-weight-bolder">Stats of your short link</h1>
+          <p class="lead font-weight-normal">A URL shortener built with powerful tools to help you grow and protect your
+            brand.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="/./img/linkshortening.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <table class="table table-responsive table-striped">
+          <thead>
+            <tr class="text-center">
+              <th>Full URL</th>
+              <th>Short URL</th>
+              <th>Clicks</th>
+              <th>Last Click</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+              <td><a href="/<%= shortUrl.short %>">fdsafsa</a></td>
+              <td><%= shortUrl.clicks %></td>
+              <td>
+                <% if (shortUrl.last_click) { %>
+                <%= shortUrl.last_click.toLocaleString()  %>
+                <% } %>
+              </td>
+              <td><%= shortUrl.created_at.toLocaleString()  %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
